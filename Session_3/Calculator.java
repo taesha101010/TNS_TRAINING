@@ -1,0 +1,29 @@
+import java.util.*;
+class  Calculator
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your 1st number: ");
+		float a = sc.nextFloat();
+		System.out.println("Enter your 2nd number: ");
+		float b = sc.nextFloat();
+		
+		System.out.println("1. Add\n2. Sub\n3. Multiply\n4. Divide\n5.Modulo");
+		System.out.println("Enter your choice(1/2/3/4/5: ");
+		
+		int choice = sc.nextInt();
+		
+		switch (choice)
+		{
+		case 1:System.out.println(a+b);break;
+		case 2:System.out.println(a-b);break;
+		case 3:System.out.println(a*b);break;
+		case 4:System.out.println(a/b);break;
+		case 5:System.out.println(a%b);break;
+		
+		}
+		
+		
+	}
+}

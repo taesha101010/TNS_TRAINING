@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class  ConditionLoop
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your age: ");
+		int age = sc.nextInt();
+		
+		if (age > 18)
+		{
+			System.out.println("Greater than 18.");
+			
+		}
+		else {
+			System.out.println("less than 18.");
+		}
+		
+		
+		if (age < 20)
+		{
+			System.out.println("teenage");
+		}
+		else if (age > 20 && age < 35 )
+		{
+			System.out.println("young");
+		}
+		else {
+			System.out.println("old");
+		}
+	}
+}

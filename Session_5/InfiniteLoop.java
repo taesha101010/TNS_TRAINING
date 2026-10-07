@@ -1,0 +1,12 @@
+class InfiniteLoop 
+{
+	public static void main(String[] args) 
+	{
+		int a = 8;
+		do
+		{
+			System.out.println("Hello!!");
+		}
+		while (a == 8);
+	}
+}

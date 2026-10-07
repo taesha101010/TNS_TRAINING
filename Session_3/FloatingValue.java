@@ -1,0 +1,27 @@
+import java.util.*;
+class  FloatingValue
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		//TAKE 2 NUMBERS AND ADD IT AND GET ANSWER IN FLOAT
+		/*System.out.println("Enter your 1st number: ");
+		int num1 = sc.nextInt();
+		System.out.println("Enter Your 2nd number:  ");
+		int num2 = sc.nextInt();
+		float sum = (float) num1+num2;
+		
+		System.out.println("The floating sum is: " + sum);*/
+		
+		//CONVERT TEMP GIVEN IN FAHRENHITE TO CELSIUS USING FORMULA C = (F-32) *5/9
+		
+		System.out.println("Enter your choice(1/2/3): ");
+		float num = sc.nextInt();
+		
+		switch
+		
+		
+		
+		
+	}
+}
