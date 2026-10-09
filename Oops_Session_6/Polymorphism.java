@@ -1,0 +1,53 @@
+class Calculator
+{
+	int add(int a, int b ){
+		return a+b;
+	}
+	
+	int add(int a, int b, int c){
+         return a+b+c;
+    }
+	
+	double add(double a, double b){
+		return a+b;
+	}
+}
+
+class Animal
+{
+	void makeSound(){
+		System.out.println("Animal makes a sound.");
+}
+
+}
+	
+class Dog extends Animal
+{
+    @Override
+	void makeSound(){System.out.println("Dog barks: Woof Woof!!");}
+	
+}
+
+class Cat extends Animal
+{
+	@Override
+	void makeSound(){System.out.println("Cat meows: Meow Meow!!");}
+	
+}
+
+
+
+
+
+public class Polymorphism
+{
+	public static void main(String[] args) 
+	{
+		Animal p1 = new Dog();
+		Animal p2 = new Cat();
+		Animal p3 = new Animal();
+		p1.makeSound();
+		p2.makeSound();
+		p3.makeSound();
+	}
+}

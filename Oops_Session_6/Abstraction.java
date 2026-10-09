@@ -1,0 +1,38 @@
+// package Oops;
+abstract class PaymentGateway
+{
+	void printReceipt(){
+		System.out.println("Receipt generated.");
+	}
+	
+	abstract void processPayment(double amount);
+	
+
+}
+class UpiPayment extends PaymentGateway{
+	 @Override
+	 void processPayment(double amount){
+		System.out.println("processing ?"+ amount + "via UPI QR code." );
+		
+	 }
+
+}
+
+class CreditCardPayment extends PaymentGateway
+{
+	@Override
+	void processPayment(double amount){
+		System.out.println("processing ?"+ amount + "via Card Swipe and OTP.");
+	}
+}
+
+public class Abstraction
+
+{
+	public static void main(String[] args) 
+	{
+		PaymentGateway payment = new UpiPayment();
+		payment.processPayment(250.0);
+		payment.printReceipt();
+	}
+}
