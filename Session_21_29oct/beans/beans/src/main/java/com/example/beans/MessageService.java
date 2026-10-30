@@ -1,0 +1,37 @@
+package com.example.beans;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class MessageService {
+
+    /*
+     * private means only this class can access the field.
+     * final means the field must be assigned once and cannot be replaced.
+     * Together, this makes the dependency available and stable.
+     */
+    private final MessageRepository repository;
+
+    /*
+     * Constructor injection means Spring passes a MessageRepository bean
+     * into this constructor while creating MessageService.
+     *
+     * Without Spring, we might write:
+     *
+     *     new MessageService(new MessageRepository());
+     *
+     * With Spring, Spring performs that wiring for us.
+     */
+    public MessageService(MessageRepository repository) {
+        this.repository = repository;
+    }
+
+    /*
+     * The service delegates the data lookup to its repository dependency.
+     * This keeps responsibilities separate: the repository provides data,
+     * while the service coordinates application logic.
+     */
+    public String getMessage() {
+        return repository.findMessage();
+    }
+}
